@@ -54,7 +54,14 @@ struct ContentView: View {
                                 .cornerRadius(60)
                                 .frame(width: 1094, height: 120)
                                 .padding()
-                                               
+                        ZStack{
+                                 
+                                CustomTextField(placeholder : Text("nomutilisateur").foregroundColor(.white), text: $nomutilisateur )
+                                    .background(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
+                                    .cornerRadius(60)
+                                    .frame(width: 1094, height: 120)
+                                    .padding()
+                                                   
                                                 
                                 }
                             }
