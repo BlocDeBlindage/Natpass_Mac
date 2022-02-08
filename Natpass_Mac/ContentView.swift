@@ -14,6 +14,32 @@ extension NSTextField {
         set { }
     }
 }
+struct SecureInputView: View {
+    
+    @Binding private var text: String
+    @State private var isSecured: Bool = true
+    private var title: String
+    
+    init(_ title: String, text: Binding<String>) {
+        self.title = title
+        self._text = text
+    }
+    
+    var body: some View {
+        ZStack(alignment: .trailing) {
+            if isSecured {
+                SecureField(title, text: $text)
+            } else {
+                TextField(title, text: $text)
+            }
+            Button(action: {isSecured.toggle()})
+            {
+                Image(systemName: "eye")
+                    .accentColor(.white)
+            }.buttonStyle(PlainButtonStyle())
+        }
+    }
+}
 
 struct CustomTextField: View {
     var placeholder: Text
@@ -29,6 +55,7 @@ struct CustomTextField: View {
         }
     }
 }
+
 struct CustomsecureField: View {
     var placeholder: Text
     @Binding var text : String
@@ -38,7 +65,7 @@ struct CustomsecureField: View {
     var body: some View {
         ZStack{
             if text.isEmpty {placeholder}
-            SecureField("",text: $text)
+            SecureInputView("",text: $text)
             
         }
     }
@@ -47,8 +74,13 @@ struct CustomsecureField: View {
 struct ContentView: View {
     @State var nomutilisateur: String = ""
     @State var motdepasse: String = ""
+    @State var Connexion : Bool = false
+
     var body: some View {
        
+        
+            
+        
         //afficher image de fond //
         ZStack{
             Image("img-fond")
@@ -77,7 +109,7 @@ struct ContentView: View {
                                     
                                     .scaledToFill()
                                 
-                                CustomTextField(placeholder : Text("nomutilisateur").foregroundColor(.white), text: $nomutilisateur )
+                                CustomTextField(placeholder : Text("nom d'utilisateur").foregroundColor(.white), text: $nomutilisateur )
                                     .font(.system(size: 20))
                                     .textFieldStyle(PlainTextFieldStyle())
                                     .frame(width: 1000, height: 17.5)
@@ -99,24 +131,54 @@ struct ContentView: View {
                                     .frame(width: 20, height: 20 )
                                     
                                     .scaledToFill()
-                                
-                            CustomsecureField(placeholder : Text("motdepasse").foregroundColor(.white), text: $motdepasse)
+                        
+                            CustomsecureField(placeholder : Text("mot de passe").foregroundColor(.white), text: $motdepasse)
                                 .font(.system(size: 20))
                                 .textFieldStyle(PlainTextFieldStyle())
                                 .frame(width: 1000, height: 17.5)
                                 .background(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
                                 .padding()
+                                    }
                                     }.padding()
                                 .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
+                        
+                        Spacer()
+                            .frame(height: 100)
+                        
+                        ZStack {
+                            HStack{
+                                Image("icone_connexion")
+                                    .resizable()
+                                    .frame(width: 60, height: 60 )
+                                    
+                                    .scaledToFill()
+                                
+                         Button(action: {Connexion.toggle()})
+                        {
+                            ZStack {
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
+                                .frame(width: 400, height: 60)
+                            Text("se connecter")
+                                .font(.system(size: 30))
+                                .textFieldStyle(PlainTextFieldStyle())
+
+                                .padding()
+                            
                             }
+                        }.buttonStyle(PlainButtonStyle())
+                            }.padding()
+                                .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
+                            
+                        
+                        }
                                 }
                             }
                                         
                         }
                         }
                 }
-            }
-    
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
