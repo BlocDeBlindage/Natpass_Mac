@@ -78,7 +78,7 @@ struct ContentView: View {
 
     var body: some View {
        
-        
+        NavigationView{
             
         
         //afficher image de fond //
@@ -155,6 +155,8 @@ struct ContentView: View {
                                 
                          Button(action: {Connexion.toggle()})
                         {
+                            NavigationLink(destination: Acceuil())
+                            {
                             ZStack {
                             RoundedRectangle(cornerRadius: 25)
                                 .fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
@@ -167,19 +169,18 @@ struct ContentView: View {
                             
                             }
                         }.buttonStyle(PlainButtonStyle())
+                        }
+                                
                             }.padding()
                                 .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
-                            
-                        
-                        }
-                                }
                             }
-                                        
                         }
-                        }
+                    }
                 }
+            }
+        }
+    }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
