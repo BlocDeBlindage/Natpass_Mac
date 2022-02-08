@@ -5,7 +5,16 @@
 //  Created by etudiant btssnir on 03/02/2022.
 //
 
+
 import SwiftUI
+
+extension NSTextField {
+    open override var focusRingType: NSFocusRingType {
+        get { .none }
+        set { }
+    }
+}
+
 struct CustomTextField: View {
     var placeholder: Text
     @Binding var text : String
@@ -20,11 +29,24 @@ struct CustomTextField: View {
         }
     }
 }
-
+struct CustomsecureField: View {
+    var placeholder: Text
+    @Binding var text : String
+    var editingChanged: (Bool)->() = { _ in}
+    var comint: ()->() = {  }
+   
+    var body: some View {
+        ZStack{
+            if text.isEmpty {placeholder}
+            SecureField("",text: $text)
+            
+        }
+    }
+}
 
 struct ContentView: View {
     @State var nomutilisateur: String = ""
-   
+    @State var motdepasse: String = ""
     var body: some View {
        
         //afficher image de fond //
@@ -47,22 +69,46 @@ struct ContentView: View {
                             .cornerRadius(60)
                             .frame(width: 1155, height: 650.0)
                     VStack{
-                        ZStack{
-                             
-                            CustomTextField(placeholder : Text("nomutilisateur").foregroundColor(.white), text: $nomutilisateur )
-                                .background(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
-                                .cornerRadius(60)
-                                .frame(width: 1094, height: 120)
-                                .padding()
-                        ZStack{
-                                 
+                        ZStack {
+                            HStack{
+                                Image(systemName: "person")
+                                    .resizable()
+                                    .frame(width: 20, height: 20 )
+                                    
+                                    .scaledToFill()
+                                
                                 CustomTextField(placeholder : Text("nomutilisateur").foregroundColor(.white), text: $nomutilisateur )
+                                    .font(.system(size: 20))
+                                    .textFieldStyle(PlainTextFieldStyle())
+                                    .frame(width: 1000, height: 17.5)
                                     .background(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
-                                    .cornerRadius(60)
-                                    .frame(width: 1094, height: 120)
                                     .padding()
-                                                   
-                                                
+                            }.padding()
+                            .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
+                            
+                            
+                            Spacer()
+                                .frame(height: 200)
+                            
+                         
+                        }
+                        ZStack {
+                            HStack{
+                                Image(systemName: "lock")
+                                    .resizable()
+                                    .frame(width: 20, height: 20 )
+                                    
+                                    .scaledToFill()
+                                
+                            CustomsecureField(placeholder : Text("motdepasse").foregroundColor(.white), text: $motdepasse)
+                                .font(.system(size: 20))
+                                .textFieldStyle(PlainTextFieldStyle())
+                                .frame(width: 1000, height: 17.5)
+                                .background(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
+                                .padding()
+                                    }.padding()
+                                .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
+                            }
                                 }
                             }
                                         
@@ -70,7 +116,7 @@ struct ContentView: View {
                         }
                 }
             }
-    }
+    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
