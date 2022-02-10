@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6852BC627B51A91002879E2 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6852BC527B51A91002879E2 /* test.swift */; };
 		A6F1EE5327B27D97002E48EB /* Acceuil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F1EE5227B27D97002E48EB /* Acceuil.swift */; };
 		A6F7DD2E27B1723D000CFB9B /* Natpass_MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7DD2D27B1723D000CFB9B /* Natpass_MacApp.swift */; };
 		A6F7DD3027B1723D000CFB9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7DD2F27B1723D000CFB9B /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6852BC527B51A91002879E2 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		A6F1EE5227B27D97002E48EB /* Acceuil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acceuil.swift; sourceTree = "<group>"; };
 		A6F7DD2A27B1723D000CFB9B /* Natpass_Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natpass_Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7DD2D27B1723D000CFB9B /* Natpass_MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Natpass_MacApp.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				A6F7DD2D27B1723D000CFB9B /* Natpass_MacApp.swift */,
 				A6F7DD2F27B1723D000CFB9B /* ContentView.swift */,
 				A6F1EE5227B27D97002E48EB /* Acceuil.swift */,
+				A6852BC527B51A91002879E2 /* test.swift */,
 				A6F7DD3127B1725B000CFB9B /* Assets.xcassets */,
 				A6F7DD3627B1725B000CFB9B /* Natpass_Mac.entitlements */,
 				A6F7DD3327B1725B000CFB9B /* Preview Content */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F7DD3027B1723D000CFB9B /* ContentView.swift in Sources */,
+				A6852BC627B51A91002879E2 /* test.swift in Sources */,
 				A6F1EE5327B27D97002E48EB /* Acceuil.swift in Sources */,
 				A6F7DD2E27B1723D000CFB9B /* Natpass_MacApp.swift in Sources */,
 			);

@@ -78,6 +78,7 @@ struct ContentView: View {
 
     var body: some View {
        
+        VStack {
         NavigationView{
             
         
@@ -145,41 +146,46 @@ struct ContentView: View {
                         Spacer()
                             .frame(height: 100)
                         
-                        ZStack {
-                            HStack{
+                     
+                            
+                       
+                        Button(action: {} ) //{Connexion.toggle()})
+                        {
+                            NavigationLink(destination: Acceuil())
+                            {
+                          HStack{
                                 Image("icone_connexion")
                                     .resizable()
                                     .frame(width: 60, height: 60 )
                                     
                                     .scaledToFill()
-                                
-                         Button(action: {Connexion.toggle()})
-                        {
-                            NavigationLink(destination: Acceuil())
-                            {
-                            ZStack {
+                        ZStack {
                             RoundedRectangle(cornerRadius: 25)
                                 .fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
                                 .frame(width: 400, height: 60)
+                              
                             Text("se connecter")
                                 .font(.system(size: 30))
                                 .textFieldStyle(PlainTextFieldStyle())
 
                                 .padding()
+                                        }
+                                    }
+                                }
                             
-                            }
-                        }.buttonStyle(PlainButtonStyle())
-                        }
-                                
-                            }.padding()
+                                }   .buttonStyle(PlainButtonStyle())
+                                .padding()
                                 .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
-                            }
+                                
+                        
+                            
                         }
                     }
                 }
             }
         }
     }
+}
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
