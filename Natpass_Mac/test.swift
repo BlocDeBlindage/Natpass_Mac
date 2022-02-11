@@ -9,7 +9,10 @@ import SwiftUI
 
 struct test: View {
     var body: some View {
-        Image("img-fond")
+        NavigationLink(destination: Acceuil()){
+            
+        }
+       
     }
 }
 

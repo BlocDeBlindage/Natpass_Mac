@@ -10,7 +10,7 @@ import SwiftUI
 struct Acceuil: View {
     var body: some View {
         
-            
+        NavigationView{
         ZStack {
             Rectangle()
             //dégradé de couleur//
@@ -54,7 +54,7 @@ struct Acceuil: View {
         }
     }
         
-
+}
     
 
       
