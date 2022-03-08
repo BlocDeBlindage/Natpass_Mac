@@ -7,19 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6852BC627B51A91002879E2 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6852BC527B51A91002879E2 /* test.swift */; };
-		A6F1EE5327B27D97002E48EB /* Acceuil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F1EE5227B27D97002E48EB /* Acceuil.swift */; };
-		A6F7DD2E27B1723D000CFB9B /* Natpass_MacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7DD2D27B1723D000CFB9B /* Natpass_MacApp.swift */; };
+		A6E1D2E227D219E900F3690D /* Acceuil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E1D2E127D219E900F3690D /* Acceuil.swift */; };
+		A6F560E127D6584A007AEE58 /* Natpass_Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */; };
 		A6F7DD3027B1723D000CFB9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7DD2F27B1723D000CFB9B /* ContentView.swift */; };
 		A6F7DD3227B1725B000CFB9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7DD3127B1725B000CFB9B /* Assets.xcassets */; };
 		A6F7DD3527B1725B000CFB9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7DD3427B1725B000CFB9B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A6852BC527B51A91002879E2 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		A6F1EE5227B27D97002E48EB /* Acceuil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acceuil.swift; sourceTree = "<group>"; };
+		A6E1D2E127D219E900F3690D /* Acceuil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acceuil.swift; sourceTree = "<group>"; };
+		A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Natpass_Mac.swift; sourceTree = "<group>"; };
 		A6F7DD2A27B1723D000CFB9B /* Natpass_Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natpass_Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6F7DD2D27B1723D000CFB9B /* Natpass_MacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Natpass_MacApp.swift; sourceTree = "<group>"; };
 		A6F7DD2F27B1723D000CFB9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A6F7DD3127B1725B000CFB9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6F7DD3427B1725B000CFB9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -56,10 +54,9 @@
 		A6F7DD2C27B1723D000CFB9B /* Natpass_Mac */ = {
 			isa = PBXGroup;
 			children = (
-				A6F7DD2D27B1723D000CFB9B /* Natpass_MacApp.swift */,
+				A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */,
+				A6E1D2E127D219E900F3690D /* Acceuil.swift */,
 				A6F7DD2F27B1723D000CFB9B /* ContentView.swift */,
-				A6F1EE5227B27D97002E48EB /* Acceuil.swift */,
-				A6852BC527B51A91002879E2 /* test.swift */,
 				A6F7DD3127B1725B000CFB9B /* Assets.xcassets */,
 				A6F7DD3627B1725B000CFB9B /* Natpass_Mac.entitlements */,
 				A6F7DD3327B1725B000CFB9B /* Preview Content */,
@@ -145,10 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F560E127D6584A007AEE58 /* Natpass_Mac.swift in Sources */,
 				A6F7DD3027B1723D000CFB9B /* ContentView.swift in Sources */,
-				A6852BC627B51A91002879E2 /* test.swift in Sources */,
-				A6F1EE5327B27D97002E48EB /* Acceuil.swift in Sources */,
-				A6F7DD2E27B1723D000CFB9B /* Natpass_MacApp.swift in Sources */,
+				A6E1D2E227D219E900F3690D /* Acceuil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

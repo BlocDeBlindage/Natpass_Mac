@@ -2,64 +2,55 @@
 //  Acceuil.swift
 //  Natpass_Mac
 //
-//  Created by etudiant btssnir on 08/02/2022.
+//  Created by etudiant btssnir on 04/03/2022.
 //
 
 import SwiftUI
 
 struct Acceuil: View {
+    @Binding var show: Bool
+    let names = ["Holly", "Josh", "Rhonda", "Ted"]
+    @State private var searchText = ""
     var body: some View {
-        
-        NavigationView{
-        ZStack {
+        ZStack{
             Rectangle()
-            //dégradé de couleur//
-                .fill(LinearGradient(colors: [Color(red: 0.0, green: 10/255, blue: 46/255, opacity:0.9), Color(red: 78/255, green: 98/255, blue: 169/255, opacity: 0.9)], startPoint: .topLeading, endPoint: .bottomTrailing))
-                //dégradé de couleur//
-                    .cornerRadius(60)
-                    .frame(width: 1155, height: 650.0)
-            
-            
-            Button(action: {} ) //{Connexion.toggle()})
+                .fill(Color(red: 53/255, green: 54/255, blue: 62/255, opacity:1))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            ZStack
             {
-                NavigationLink(destination: test())
-                {
-              HStack{
-                    Image("icone_connexion")
-                        .resizable()
-                        .frame(width: 60, height: 60 )
-                        
-                        .scaledToFill()
-            ZStack {
-                RoundedRectangle(cornerRadius: 25)
-                    .fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1))
-                    .frame(width: 400, height: 60)
-                  
-                Text("se connecter")
-                    .font(.system(size: 30))
-                    .textFieldStyle(PlainTextFieldStyle())
-
-                    .padding()
-                            }
-                        }
-                    }
-                
-                    }   .buttonStyle(PlainButtonStyle())
-                    .padding()
-                    .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
+               Image("toolbar-img")
                     
-            
-                
+                    .offset(x: 0, y: -510)
+                    HStack
+                    {
+                        Image("LOGO")
+                            .resizable()
+                            .frame(width: 83.96, height: 51.97)
+                            .offset(x: -915, y: -510)
+                        
+                        NavigationView {
+                                   List {
+                                       ForEach(searchResults, id: \.self) { name in
+                                           NavigationLink(destination: Text(name)) {
+                                               Text(name)
+                                           }
+                                       }
+                                   }
+                                   .searchable(text: $searchText)
+                                   .navigationTitle("Contacts")
+                               }
+                           }
+                           }
+                    }
             }
-        }
-    }
-        
-}
     
-
-      
-struct Acceuil_Previews: PreviewProvider {
-    static var previews: some View {
-        Acceuil()
+    var searchResults: [String] {
+        if searchText.isEmpty {
+            return names
+        } else {
+            return names.filter { $0.contains(searchText) }
+        }
+        
     }
+    
 }

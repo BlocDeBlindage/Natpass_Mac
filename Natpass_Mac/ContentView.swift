@@ -76,17 +76,36 @@ struct CustomsecureField: View { //identique a la fonction customeTextField mais
 }
 
 struct ContentView: View {
+    @State private var show = false
+    var body: some View {
+        VStack{
+            if !show {
+                connexion(show: $show)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.blue)
+                    .transition(AnyTransition.move(edge: .leading)).animation(.default)
+            }
+            if show {
+                Acceuil(show: $show)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.green)
+                    .transition(AnyTransition.move(edge: .trailing)).animation(.default)
+            }
+        }
+    }
+}
+
+
+struct connexion: View {
     @State var nomutilisateur: String = "" //variable pour text du login utilisateur
     @State var motdepasse: String = ""   //variable pour text du login mot de passe
-
+    @Binding var show: Bool
     var body: some View {
        
-        NavigationView{
-            
         //afficher image de fond //
         ZStack{
             Image("img-fond")
-            //afficher image de fond //
+        //afficher image de fond //
             VStack{   //aligné verticalement img fond avec logo
                 HStack{ //aligné horizontalement logo  avec natpass
                     Image("LOGO") //image utilisé depuis assets
@@ -148,26 +167,25 @@ struct ContentView: View {
 
                         Spacer()
                             .frame(height: 100)
-                       
-                            NavigationLink(destination: Acceuil())
-                            {
-                                HStack{
-                                   Image("icone_connexion")
-                                        .font(.system(size: 30))
-                                     //   .scaledToFill()
-                                  Spacer()
-                                        .frame(height: 20)
-
-                                    Text("se connecter")
-                                            .font(.system(size: 30))
-                              
-                                }.cornerRadius(60)
-                               .frame(width: 400, height: 60)
-                                
-                            } .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
-                            .frame(width: 400, height: 60) //fin navigationlink
-                            .buttonStyle(PlainButtonStyle())
                         
+                        Button(action: { self.show = true})
+                        {
+                            HStack{
+                               Image("icone_connexion")
+                                    .font(.system(size: 15))
+                                 //   .scaledToFill()
+
+
+                                Text("se connecter")
+                                        .font(.system(size: 30))
+                          
+                            }.cornerRadius(60)
+                           .frame(width: 400, height: 60)
+                           .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
+                           .buttonStyle(PlainButtonStyle())
+                                    }
+                        
+                            
                                 
                         
                             
@@ -175,9 +193,9 @@ struct ContentView: View {
                     } // fin de l'alignement en profondeur pour la partie connexion
                 } // fin de l'alignement du Vstak qui aligne tout
             } // fin du Zstack pour l'image de fond
-        } //fin navigationview
     } // fin body
-} //fin contentview
+} //fin content
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
