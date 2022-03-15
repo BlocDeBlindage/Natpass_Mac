@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		A6E1D2E227D219E900F3690D /* Acceuil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E1D2E127D219E900F3690D /* Acceuil.swift */; };
 		A6F560E127D6584A007AEE58 /* Natpass_Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */; };
+		A6F560E327D9EA67007AEE58 /* CRAWL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E227D9EA67007AEE58 /* CRAWL.swift */; };
+		A6F560E527D9EA96007AEE58 /* BRASSE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E427D9EA96007AEE58 /* BRASSE.swift */; };
+		A6F560E727D9EAB7007AEE58 /* PAPILLON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E627D9EAB7007AEE58 /* PAPILLON.swift */; };
+		A6F560E927D9EACF007AEE58 /* DOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E827D9EACF007AEE58 /* DOS.swift */; };
+		A6F560EC27D9FBFE007AEE58 /* resultat_recherche.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560EB27D9FBFE007AEE58 /* resultat_recherche.swift */; };
 		A6F7DD3027B1723D000CFB9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F7DD2F27B1723D000CFB9B /* ContentView.swift */; };
 		A6F7DD3227B1725B000CFB9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7DD3127B1725B000CFB9B /* Assets.xcassets */; };
 		A6F7DD3527B1725B000CFB9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F7DD3427B1725B000CFB9B /* Preview Assets.xcassets */; };
@@ -17,6 +22,11 @@
 /* Begin PBXFileReference section */
 		A6E1D2E127D219E900F3690D /* Acceuil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acceuil.swift; sourceTree = "<group>"; };
 		A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Natpass_Mac.swift; sourceTree = "<group>"; };
+		A6F560E227D9EA67007AEE58 /* CRAWL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAWL.swift; sourceTree = "<group>"; };
+		A6F560E427D9EA96007AEE58 /* BRASSE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRASSE.swift; sourceTree = "<group>"; };
+		A6F560E627D9EAB7007AEE58 /* PAPILLON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAPILLON.swift; sourceTree = "<group>"; };
+		A6F560E827D9EACF007AEE58 /* DOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DOS.swift; sourceTree = "<group>"; };
+		A6F560EB27D9FBFE007AEE58 /* resultat_recherche.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = resultat_recherche.swift; sourceTree = "<group>"; };
 		A6F7DD2A27B1723D000CFB9B /* Natpass_Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natpass_Mac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F7DD2F27B1723D000CFB9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A6F7DD3127B1725B000CFB9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +67,11 @@
 				A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */,
 				A6E1D2E127D219E900F3690D /* Acceuil.swift */,
 				A6F7DD2F27B1723D000CFB9B /* ContentView.swift */,
+				A6F560EB27D9FBFE007AEE58 /* resultat_recherche.swift */,
+				A6F560E827D9EACF007AEE58 /* DOS.swift */,
+				A6F560E227D9EA67007AEE58 /* CRAWL.swift */,
+				A6F560E627D9EAB7007AEE58 /* PAPILLON.swift */,
+				A6F560E427D9EA96007AEE58 /* BRASSE.swift */,
 				A6F7DD3127B1725B000CFB9B /* Assets.xcassets */,
 				A6F7DD3627B1725B000CFB9B /* Natpass_Mac.entitlements */,
 				A6F7DD3327B1725B000CFB9B /* Preview Content */,
@@ -144,7 +159,12 @@
 			files = (
 				A6F560E127D6584A007AEE58 /* Natpass_Mac.swift in Sources */,
 				A6F7DD3027B1723D000CFB9B /* ContentView.swift in Sources */,
+				A6F560E527D9EA96007AEE58 /* BRASSE.swift in Sources */,
 				A6E1D2E227D219E900F3690D /* Acceuil.swift in Sources */,
+				A6F560E727D9EAB7007AEE58 /* PAPILLON.swift in Sources */,
+				A6F560E327D9EA67007AEE58 /* CRAWL.swift in Sources */,
+				A6F560E927D9EACF007AEE58 /* DOS.swift in Sources */,
+				A6F560EC27D9FBFE007AEE58 /* resultat_recherche.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

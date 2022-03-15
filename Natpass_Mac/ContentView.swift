@@ -76,19 +76,57 @@ struct CustomsecureField: View { //identique a la fonction customeTextField mais
 }
 
 struct ContentView: View {
-    @State private var show = false
+    @State private var choix = 1
+    
     var body: some View {
         VStack{
-            if !show {
-                connexion(show: $show)
+            if choix == 1{
+                connexion(choix: $choix)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.blue)
+                    .background(Color(red: 53/255, green: 54/255, blue: 62/255, opacity:1))
                     .transition(AnyTransition.move(edge: .leading)).animation(.default)
             }
-            if show {
-                Acceuil(show: $show)
+            if choix == 2 {
+                Acceuil(choix: $choix)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.green)
+                    .background(Color(red: 53/255, green: 54/255, blue: 62/255, opacity:1))
+                    .transition(AnyTransition.move(edge: .trailing)).animation(.default)
+                
+            }
+            if choix == 3{
+                CRAWL(choix: $choix)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(red: 53/255, green: 54/255, blue: 62/255, opacity:1))
+                    .transition(AnyTransition.move(edge: .trailing)).animation(.default)
+                
+            }
+            if choix == 4 {
+                BRASSE(choix: $choix)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(red: 53/255, green: 54/255, blue: 62/255, opacity:1))
+                    .transition(AnyTransition.move(edge: .trailing)).animation(.default)
+                
+            }
+            if choix == 5 {
+                PAPILLON(choix: $choix)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(red: 53/255, green: 54/255, blue: 62/255, opacity:1))
+                    .transition(AnyTransition.move(edge: .trailing)).animation(.default)
+                
+            }
+            if choix == 6 {
+                DOS(choix: $choix)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(red: 53/255, green: 54/255, blue: 62/255, opacity:1))
+                    .transition(AnyTransition.move(edge: .trailing)).animation(.default)
+                
+                
+            }
+            
+            if choix == 7 {
+                resultat_recherche(choix: $choix)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(red: 53/255, green: 54/255, blue: 62/255, opacity:1))
                     .transition(AnyTransition.move(edge: .trailing)).animation(.default)
             }
         }
@@ -99,7 +137,8 @@ struct ContentView: View {
 struct connexion: View {
     @State var nomutilisateur: String = "" //variable pour text du login utilisateur
     @State var motdepasse: String = ""   //variable pour text du login mot de passe
-    @Binding var show: Bool
+    @Binding var choix: Int
+  
     var body: some View {
        
         //afficher image de fond //
@@ -168,22 +207,24 @@ struct connexion: View {
                         Spacer()
                             .frame(height: 100)
                         
-                        Button(action: { self.show = true})
+                        Button(action: { self.choix = 2})
                         {
                             HStack{
                                Image("icone_connexion")
-                                    .font(.system(size: 15))
-                                 //   .scaledToFill()
-
-
+                                    .resizable()
+                                    .frame(width: 80, height: 80 )
+                                    .offset(x: 20)
+                                
+                                Spacer()
+                                    
                                 Text("se connecter")
                                         .font(.system(size: 30))
-                          
-                            }.cornerRadius(60)
-                           .frame(width: 400, height: 60)
-                           .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
-                           .buttonStyle(PlainButtonStyle())
-                                    }
+                                        .offset(x: -80)
+                            }
+                                    }.cornerRadius(60)
+                            .frame(width: 400, height: 60)
+                            .background(Capsule().fill(Color(red: 55/255, green: 66/255, blue: 114/255, opacity:1)))
+                            .buttonStyle(PlainButtonStyle())
                         
                             
                                 
