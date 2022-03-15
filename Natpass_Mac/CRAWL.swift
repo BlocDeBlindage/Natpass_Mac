@@ -47,6 +47,7 @@ struct CRAWL: View {
                                  
                                 
                         }
+                        Text("test")
                                 }.cornerRadius(60)
                         .frame(width: 400, height: 60)
                         .buttonStyle(PlainButtonStyle())
