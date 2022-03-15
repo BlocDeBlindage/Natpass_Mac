@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6D7779027E0878500C533F2 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7778F27E0878500C533F2 /* JSON.swift */; };
 		A6E1D2E227D219E900F3690D /* Acceuil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E1D2E127D219E900F3690D /* Acceuil.swift */; };
 		A6F560E127D6584A007AEE58 /* Natpass_Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */; };
 		A6F560E327D9EA67007AEE58 /* CRAWL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E227D9EA67007AEE58 /* CRAWL.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A6D7778F27E0878500C533F2 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		A6E1D2E127D219E900F3690D /* Acceuil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acceuil.swift; sourceTree = "<group>"; };
 		A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Natpass_Mac.swift; sourceTree = "<group>"; };
 		A6F560E227D9EA67007AEE58 /* CRAWL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAWL.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		A6F7DD2C27B1723D000CFB9B /* Natpass_Mac */ = {
 			isa = PBXGroup;
 			children = (
+				A6D7778F27E0878500C533F2 /* JSON.swift */,
 				A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */,
 				A6E1D2E127D219E900F3690D /* Acceuil.swift */,
 				A6F7DD2F27B1723D000CFB9B /* ContentView.swift */,
@@ -160,6 +163,7 @@
 				A6F560E127D6584A007AEE58 /* Natpass_Mac.swift in Sources */,
 				A6F7DD3027B1723D000CFB9B /* ContentView.swift in Sources */,
 				A6F560E527D9EA96007AEE58 /* BRASSE.swift in Sources */,
+				A6D7779027E0878500C533F2 /* JSON.swift in Sources */,
 				A6E1D2E227D219E900F3690D /* Acceuil.swift in Sources */,
 				A6F560E727D9EAB7007AEE58 /* PAPILLON.swift in Sources */,
 				A6F560E327D9EA67007AEE58 /* CRAWL.swift in Sources */,
