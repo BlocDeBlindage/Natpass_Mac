@@ -131,10 +131,10 @@ struct ContentView: View {
             }
         }
     }
-}
 
 
 struct connexion: View {
+    @ObservedObject var dataFetched = WebServices()
     @State var nomutilisateur: String = "" //variable pour text du login utilisateur
     @State var motdepasse: String = ""   //variable pour text du login mot de passe
     @Binding var choix: Int
@@ -207,8 +207,16 @@ struct connexion: View {
                         Spacer()
                             .frame(height: 100)
                         
-                        Button(action: { self.choix = 2})
+                        Button(action: {dataFetched.fetchData(nomutilisateur: nomutilisateur, motdepasse: motdepasse)})
                         {
+                            
+                            if dataFetched.resultat.connexion {
+                                Text("").onAppear(){
+                                    choix = 1}
+                                }
+                     
+                            else {Text("").onAppear(){choix = 999}}
+                        
                             HStack{
                                Image("icone_connexion")
                                     .resizable()
@@ -234,9 +242,9 @@ struct connexion: View {
                     } // fin de l'alignement en profondeur pour la partie connexion
                 } // fin de l'alignement du Vstak qui aligne tout
             } // fin du Zstack pour l'image de fond
-    } // fin body
-} //fin content
-
+        } // fin body
+    } //fin content
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

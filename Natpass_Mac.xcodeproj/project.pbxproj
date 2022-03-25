@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A6D7779027E0878500C533F2 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7778F27E0878500C533F2 /* JSON.swift */; };
+		A6387AA727EC837C008F90F2 /* ServiceWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6387AA627EC837C008F90F2 /* ServiceWeb.swift */; };
+		A6387AA927EC8481008F90F2 /* ResultatConnexion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6387AA827EC8481008F90F2 /* ResultatConnexion.swift */; };
 		A6E1D2E227D219E900F3690D /* Acceuil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E1D2E127D219E900F3690D /* Acceuil.swift */; };
 		A6F560E127D6584A007AEE58 /* Natpass_Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */; };
 		A6F560E327D9EA67007AEE58 /* CRAWL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F560E227D9EA67007AEE58 /* CRAWL.swift */; };
@@ -21,7 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A6D7778F27E0878500C533F2 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		A6387AA627EC837C008F90F2 /* ServiceWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceWeb.swift; sourceTree = "<group>"; };
+		A6387AA827EC8481008F90F2 /* ResultatConnexion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultatConnexion.swift; sourceTree = "<group>"; };
 		A6E1D2E127D219E900F3690D /* Acceuil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acceuil.swift; sourceTree = "<group>"; };
 		A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Natpass_Mac.swift; sourceTree = "<group>"; };
 		A6F560E227D9EA67007AEE58 /* CRAWL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRAWL.swift; sourceTree = "<group>"; };
@@ -66,7 +68,8 @@
 		A6F7DD2C27B1723D000CFB9B /* Natpass_Mac */ = {
 			isa = PBXGroup;
 			children = (
-				A6D7778F27E0878500C533F2 /* JSON.swift */,
+				A6387AA627EC837C008F90F2 /* ServiceWeb.swift */,
+				A6387AA827EC8481008F90F2 /* ResultatConnexion.swift */,
 				A6F560E027D6584A007AEE58 /* Natpass_Mac.swift */,
 				A6E1D2E127D219E900F3690D /* Acceuil.swift */,
 				A6F7DD2F27B1723D000CFB9B /* ContentView.swift */,
@@ -118,7 +121,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					A6F7DD2927B1723D000CFB9B = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -160,15 +163,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6387AA727EC837C008F90F2 /* ServiceWeb.swift in Sources */,
 				A6F560E127D6584A007AEE58 /* Natpass_Mac.swift in Sources */,
 				A6F7DD3027B1723D000CFB9B /* ContentView.swift in Sources */,
 				A6F560E527D9EA96007AEE58 /* BRASSE.swift in Sources */,
-				A6D7779027E0878500C533F2 /* JSON.swift in Sources */,
 				A6E1D2E227D219E900F3690D /* Acceuil.swift in Sources */,
 				A6F560E727D9EAB7007AEE58 /* PAPILLON.swift in Sources */,
 				A6F560E327D9EA67007AEE58 /* CRAWL.swift in Sources */,
 				A6F560E927D9EACF007AEE58 /* DOS.swift in Sources */,
 				A6F560EC27D9FBFE007AEE58 /* resultat_recherche.swift in Sources */,
+				A6387AA927EC8481008F90F2 /* ResultatConnexion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +300,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Natpass_Mac/Natpass_Mac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -321,6 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Natpass_Mac/Natpass_Mac.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
